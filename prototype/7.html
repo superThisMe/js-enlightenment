@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            var Foo = function Foo(){};
+
+            Foo.prototype = {}; // 빈 객체로 prototype 속성을 대체한다.
+
+            var FooInstance = new Foo();
+
+            console.log(FooInstance.constructor === Foo);   // false가 기록된다. 참조가 망가졌다.
+            console.log(FooInstance.constructor);   // Foo()가 아닌 Object()가 기록된다.
+
+            // prototype 값을 대체하지 않은 경우와 비교해 보자.
+            var Bar = function Bar(){};
+            
+            var BarInstance = new Bar();
+
+            console.log(BarInstance.constructor === Bar);   // true가 기록된다.
+            console.log(BarInstance.constructor);   // Bar()가 기록된다.
+
+            Foo.prototype = {constructor:Foo};
+
+            var FooInstance2 = new Foo();
+
+            console.log(FooInstance2.constructor === Foo);  // true가 기록된다.
+            console.log(FooInstance2.constructor);  // Foo()가 기록된다.
+        </script>
+    </body>
+</html>

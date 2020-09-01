@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            var Person = function(){this.bar = 'bar'};
+            Person.prototype.foo = 'foo';
+
+            var Chef = function(){this.goo = 'goo'};
+            Chef.prototype = new Person();
+            var cody = new Chef();
+
+            console.log(cody.foo);  // 'foo'가 기록된다.
+            console.log(cody.goo);  // 'goo'가 기록된다.
+            console.log(cody.bar);  // 'bar'가 기록된다.
+        </script>
+    </body>
+</html>

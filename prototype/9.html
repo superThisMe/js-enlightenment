@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            var Person = function(){};
+
+            // 모든 Person 인스턴스는 legs, arms, countLimbs 속성을 상속한다.
+            Person.prototype.legs = 2;
+            Person.prototype.arms = 2;
+            Person.prototype.countLimbs = function() {return this.legs + this.arms;};
+
+            var chuck = new Person();
+
+            console.log(chuck.countLimbs());    // 4가 기록된다.
+        </script>
+    </body>
+</html>
