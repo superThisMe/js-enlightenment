@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            var myArray = ['blue', 'green', 'orange', 'red'];
+            console.log(myArray.length);    // 4가 기록된다.
+
+            myArray.length = 99;
+            console.log(myArray.length);    // 99가 기록된다. index가 아닌 크기를 설정한 것이다.
+            myArray.length = 1;    // 하나만 남기고 모든 값을 제거한다. 따라서 index [1]은 사라질 것이다.
+            console.log(myArray[1]);    // undefined가 기록된다.
+
+            console.log(myArray);   // '["blue"]'가 기록된다.
+        </script>
+    </body>
+</html>

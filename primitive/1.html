@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            // 문자열 객체를 객체처럼 다루기
+            var stringObject = new String('foo');
+            console.log(stringObject.length);   // 3이 기록된다.
+            console.log(stringObject['length']);    // 3이 기록된다.
+
+            // 문자열 리터럴/원시값은 이 값을 객체처럼 다룰 때 객체로 변환된다.
+            var stringLiteral = 'foo';
+            console.log(stringLiteral.length);  // 3이 기록된다.
+            console.log(stringLiteral['length']);   // 3이 기록된다.
+            console.log('bar'.length);  // 3이 기록된다.
+            console.log('bar'['length']);   // 3이 기록된다.
+        </script>
+    </body>
+</html>

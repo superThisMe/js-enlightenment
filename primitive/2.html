@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            // 숫자 객체를 객체처럼 다루기
+            var numberObject = new Number(1.12345);
+            console.log(numberObject.toFixed());    // 1이 기록된다.
+            console.log(numberObject['toFixed']()); // 1이 기록된다.
+
+            // 숫자 리터럴/원시값은 이 값을 객체처럼 다룰 때 객체로 변환된다.
+            var numberLiteral = 1.12345;
+            console.log(numberLiteral.toFixed());   // 1이 기록된다.
+            console.log(numberLiteral['toFixed']());    // 1이 기록된다.
+            console.log((1234).toString()); // '1234'가 기록된다.
+            console.log(1234['toString']());    // '1234'가 기록된다.
+        </script>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            // new 키워드와 Boolean() 생성자를 사용해 불리언 객체 만들기.
+            var myBoolean1 = new Boolean(false);    // new 키워드 사용
+            console.log(typeof myBoolean1); // 'object'가 기록된다.
+
+            // new 키워드 없이 Boolean() 생성자만 사용해 리터럴/원시 불리언값 만들기
+            var myBoolean2 = Boolean(0);    // new 키워드를 사용하지 않음.
+            console.log(typeof myBoolean2); // 'boolean'이 기록된다.
+
+            // 리터럴/원시 불리언값 만들기(생성자가 암묵적으로 사용됨).
+            var myBoolean3 = false;
+            console.log(typeof myBoolean3); // 'boolean'이 기록된다.
+            console.log(myBoolean1, myBoolean2, myBoolean3);    // false {} false false가 기록된다.
+        </script>
+    </body>
+</html>

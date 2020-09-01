@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            var myArray = [];
+            myArray[50] = 'blue';
+            console.log(myArray.length);    // 자바스크립트는 0번부터 'blue'라는 값을 가진 50번 index까지 값을 만들어 넣으므로 51이 기록된다.
+
+            myArray[50] = {'color': 'blue'};    // 자료형을 문자열에서 Object() 객체로 바꾼다.
+            console.log(myArray[50]);   // 'Object {color="blue"}'가 기록된다.
+
+            // 각괄호를 사용해 배열의 색인과 color 속성에 접근한다.
+            console.log(myArray[50]['color']);  // 'blue'가 기록된다.
+
+            // 점 표기법을 사용한다.
+            console.log(myArray[50].color); // 'blue'가 기록된다.
+        </script>
+    </body>
+</html>

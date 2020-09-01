@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            var initailizedVariable;    // 변수 선언
+            
+            console.log(initailizedVariable);   // undefined가 기록된다.
+            console.log(typeof initailizedVariable);    // 자바스크립트가 undefined를 반환하는지 확인.
+
+            var foo = {};
+
+            console.log(foo.bar);   // foo 객체에는 bar 속성이 없으므로 undefined가 기록된다.
+            console.log(typeof foo.bar);    // 자바스크립트가 undefined를 반환하는지 확인.
+
+            // undefined가 전역 속성인지 확인
+            console.log(undefined in this); // true가 기록된다.
+        </script>
+    </body>
+</html>

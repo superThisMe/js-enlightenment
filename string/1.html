@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            // new 키워드와 String() 생성자를 사용해 문자열 객체를 만든다.
+            var stringObject = new Stinrg('foo');
+            console.log(stringObject);  // foo {0 = 'f', 1 = '0', 2 = 'o'}가 기록된다.
+            console.log(typeof stringObject);   // 'object'가 기록된다.
+
+            // new 키워드 없이 생성자만 사용해 리터럴/원시 문자열을 만든다.
+            var stringObjectWithOutNewKeyword = String('foo');  // new 키워드를 사용하지 않음.
+            console.log(stringObjectWithOutNewKeyword); // 'foo'가 기록된다.
+            console.log(typeof stringObjectWithOutNewKeyword);  // 'string'이 기록된다.
+
+            // 리터럴/원시 문자열을 만든다(생성자가 암묵적으로 사용됨).
+            var stringLiteral = 'foo';
+            console.log(stringLiteral); // 'foo'가 기록된다.
+            console.log(typeof stringLiteral);  // 'string'이 기록된다.
+        </script>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            // 여기서 사용된 값들은 모두 false 불리언값을 반환한다.
+            console.log(Boolean(0));
+            console.log(Boolean(-0));
+            console.log(Boolean(null));
+            console.log(Boolean(false));
+            console.log(Boolean(''));
+            console.log(Boolean(undefined));
+            console.log(Boolean(NaN));
+
+            // 여기서 사용한 값들은 모두 true 불리언값을 반환한다.
+            console.log(Boolean(1234));
+            console.log(Boolean('false'));  // 문자열 'false'는 false 불리언값으로 변환되지 않는다.
+            console.log(Boolean(Math));
+            console.log(Boolean(Array()));
+        </script>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            var falseValue = new Boolean(false);
+
+            console.log(falseValue);    // false 불리언 객체지만, 객체는 true처럼 취급된다.
+
+            if (falseValue) {   // false 불리언 객체라 하더라도, 불리언 객체는 true처럼 취급된다.
+                console.log('falseValue is truthy');
+            }
+        </script>
+    </body>
+</html>

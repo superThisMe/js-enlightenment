@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            // new 키워드와 Number() 생성자를 사용해 숫자 객체를 만든다.
+            var numberObject = new Number(1);
+            console.log(numberObject);  // 1이 기록된다.
+            console.log(typeof numberObject);   // 'object'가 기록된다.
+
+            // new 키워드 없이 생성자만 사용해 리터럴/원스 숫자값을 만든다.
+            var numberObjectWithOutNew = Number(1);
+            console.log(numberObjectWithOutNew);    // 1이 기록된다.
+            console.log(typeof numberObjectWithOutNew); // 'number'가 기록된다.
+
+            // 리터럴/원스 숫자값을 만든다(생성자가 암묵적으로 사용됨).
+            var numberLiteral = 1;
+            console.log(numberLiteral); // 1이 기록된다.
+            console.log(typeof numberLiteral);  // 'number'가 기록된다.
+        </script>
+    </body>
+</html>
