@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            var Person = function(living, age, gender) {
+                this.living = living;
+                this.age = age;
+                this.gender = gender;
+                this.getGender = function() {return this.gender;};
+            };
+
+            var kim = new Person(true, 32, 'male');
+            console.log(kim);
+
+            var lee = new Person(true, 25, 'female');
+            console.log(lee);
+        </script>
+    </body>
+</html>

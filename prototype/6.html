@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            Object.prototype.foo = 'object-foo';
+            Array.prototype.foo = 'array-foo';
+            var myArray = [];
+
+            console.log(myArray.foo);   // Array.prototype.foo에서 찾은 'array-foo'가 기록된다.
+
+            myArray.foo = 'bar';
+
+            console.log(myArray.foo);   // myArray.foo에서 찾은 'bar'가 기록된다.
+        </script>
+    </body>
+</html>

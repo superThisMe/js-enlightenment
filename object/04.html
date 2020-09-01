@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            // Object() 생성자를 사용해 kimA 객체를 생성한다.
+            var kimA = new Object();
+            kimA.living = true;
+            kimA.age = 32;
+            kimA.gender = 'male';
+            kimA.getGender = function() {return kimA.gender;};
+
+            // Object {living=true, age=32, gender="male", ...} 객체가 기록된다.
+            console.log(kimA);
+
+            /* 아래에서도 동일한 kim 객체가 만들어지지만, 네이티브 Object() 생성자가 아닌 우리가
+            정의한 Person() 생성자와 new 연산자를 사용해 인스턴스로 만들었다. */
+
+            var Person = function(living, age, gender) {
+                this.living = living;
+                this.age = age;
+                this.gender = gender;
+                this.getGender = function() {return this.gender;};
+            };
+
+            var kimB = new Person(true, 32, 'male');
+
+            // Object {living=true, age=32, gender="male", ...} 객체가 기록된다.
+            console.log(kimB);
+        </script>
+    </body>
+</html>

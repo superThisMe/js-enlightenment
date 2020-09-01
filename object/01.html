@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            // kim 객체 만들기
+            var kim = new Object();
+
+            // kim 객체를 속성으로 채우기
+            kim.living = true;
+            kim.age = 32;
+            kim.gender = 'male';
+            kim.getGender = function() {return kim.gender;};
+
+            console.log(kim.getGender());
+        </script>
+    </body>
+</html>
